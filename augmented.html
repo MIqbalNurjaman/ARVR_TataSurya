@@ -23,21 +23,21 @@
         </a-assets>
 
         <!-- Merkurius -->
-        <a-marker type="barcode" value="29">
+        <a-marker type="barcode" value="0">
             <a-sphere radius="0.5" material="shader: standard; src: #merkurius" 
                       animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
             </a-sphere>
         </a-marker>
 
         <!-- Venus -->
-        <a-marker type="barcode" value="30">
+        <a-marker type="barcode" value="1">
             <a-sphere radius="0.6" material="shader: standard; src: #venus" 
                       animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
             </a-sphere>
         </a-marker>
 
         <!-- Bumi -->
-        <a-marker type="barcode" value="23">
+        <a-marker type="barcode" value="2">
             <a-sphere radius="0.7" material="shader: standard; src: #bumi" 
                       animation="property: rotation; to: 0 360 0; loop: true; dur: 7000">
             </a-sphere>
@@ -60,8 +60,11 @@
         <!-- Saturnus -->
         <a-marker type="barcode" value="5">
             <a-sphere radius="1.1" material="shader: standard; src: #saturnus" 
-                      animation="property: rotation; to: 0 360 0; loop: true; dur: 11000">
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 11000">
             </a-sphere>
+            <a-torus position="0 0 0" radius="1.5" radius-tubular="0.1" rotation="90 0 0" 
+                    material="color: #c2a271">
+            </a-torus>
         </a-marker>
 
         <!-- Uranus -->
