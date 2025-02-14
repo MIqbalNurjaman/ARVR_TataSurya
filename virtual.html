@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Tata Surya</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene>
+
+        <!-- Latar belakang luar angkasa -->
+        <a-sky src="./sky/textures/sky.jpeg"></a-sky>
+
+        <!-- Matahari -->
+        <a-entity id="matahari" geometry="primitive: sphere; radius: 1.5"
+                  material="shader: standard; src: tata_surya/textures/matahari.jpeg"
+                  position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 25000; easing: linear">
+        </a-entity>
+
+        <!-- Merkurius -->
+        <a-entity id="merkurius_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 15000; easing: linear">
+            <a-entity id="merkurius" geometry="primitive: sphere; radius: 0.2"
+                      material="shader: standard; src: tata_surya/textures/merkurius.jpeg"
+                      position="3 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 1406400; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Venus -->
+        <a-entity id="venus_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 30000; easing: linear">
+            <a-entity id="venus" geometry="primitive: sphere; radius: 0.4"
+                      material="shader: standard; src: tata_surya/textures/venus.jpeg"
+                      position="5 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 5832000; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Bumi & Bulan -->
+        <a-entity id="bumi_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 50000; easing: linear">
+            <a-entity id="bumi" geometry="primitive: sphere; radius: 0.5"
+                      material="shader: standard; src: tata_surya/textures/bumi.jpeg"
+                      position="8 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 86400; easing: linear">
+                <a-entity id="bulan_orbit"
+                          animation="property: rotation; to: 0 360 0; loop: true; dur: 13500; easing: linear">
+                    <a-entity id="bulan" geometry="primitive: sphere; radius: 0.1"
+                              material="shader: standard; src: tata_surya/textures/bulan.jpeg"
+                              position="1 0 0"
+                              animation="property: rotation; to: 0 360 0; loop: true; dur: 2360586; easing: linear">
+                    </a-entity>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- Mars -->
+        <a-entity id="mars_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 75000; easing: linear">
+            <a-entity id="mars" geometry="primitive: sphere; radius: 0.3"
+                      material="shader: standard; src: tata_surya/textures/mars.jpeg"
+                      position="11 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 88800; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Jupiter -->
+        <a-entity id="jupiter_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 150000; easing: linear">
+            <a-entity id="jupiter" geometry="primitive: sphere; radius: 1"
+                      material="shader: standard; src: tata_surya/textures/jupiter.jpeg"
+                      position="16 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 35640; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Saturnus -->
+        <a-entity id="saturnus_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 200000; easing: linear">
+            <a-entity id="saturnus" geometry="primitive: sphere; radius: 0.9"
+                      material="shader: standard; src: tata_surya/textures/saturnus.jpeg"
+                      position="22 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 38520; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Uranus -->
+        <a-entity id="uranus_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 250000; easing: linear">
+            <a-entity id="uranus" geometry="primitive: sphere; radius: 0.7"
+                      material="shader: standard; src: tata_surya/textures/uranus.jpeg"
+                      position="28 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 61920; easing: linear">
+            </a-entity>
+        </a-entity>
+
+        <!-- Neptunus -->
+        <a-entity id="neptunus_orbit" position="0 2 -5"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 300000; easing: linear">
+            <a-entity id="neptunus" geometry="primitive: sphere; radius: 0.6"
+                      material="shader: standard; src: tata_surya/textures/neptunus.jpeg"
+                      position="34 0 0"
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 57960; easing: linear">
+            </a-entity>
+        </a-entity>
+
+    </a-scene>
+
+    <!-- Tombol untuk pindah ke Augmented Reality -->
+    <button onclick="window.location.href='augmented.html'"
+            style="position: fixed; bottom: 20px; left: 20px; padding: 10px; font-size: 16px;">
+        Pindah ke Augmented Reality
+    </button>
+    
+</body>
+</html>
